@@ -1,33 +1,37 @@
-'use strict';
+"use strict";
 
 console.log('App.js is running');
 
-// JSX - JavaScript XML
-var template = React.createElement(
-    'div',
+var app = {
+    title: "Indecision App",
+    subtitle: "Put your life in the hands of a computer"
+
+    // JSX - JavaScript XML
+};var template = React.createElement(
+    "div",
     null,
     React.createElement(
-        'h1',
+        "h1",
         null,
-        'Indecision App'
+        app.title
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'This is some info'
+        app.subtitle
     ),
     React.createElement(
-        'ol',
+        "ol",
         null,
         React.createElement(
-            'li',
+            "li",
             null,
-            'Item 1'
+            "Item 1"
         ),
         React.createElement(
-            'li',
+            "li",
             null,
-            'Item 2'
+            "Item 2"
         )
     )
 );
@@ -39,35 +43,28 @@ var user = {
 };
 
 var templateTwo = React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-        'h1',
+        "h1",
         null,
         user.name + "!"
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'Age: ',
+        "Age: ",
         user.age
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'Location: ',
+        "Location: ",
         user.location
     )
 );
 
-// Challenge 1:
-// create tempalteTwo
-// h1 with your name
-// p tag with your age
-// location
-// Render templateTwo instead of template
-
 var appRoot = document.getElementById('app');
 
 // takes 2 arguments
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
