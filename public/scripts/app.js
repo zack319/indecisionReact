@@ -1,54 +1,60 @@
-'use strict';
+"use strict";
 
 console.log('App.js is running');
 
 // JSX - JavaScript XML
 var template = React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-        'h1',
+        "h1",
         null,
-        'Indecision App'
+        "Indecision App"
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'This is some info'
+        "This is some info"
     ),
     React.createElement(
-        'ol',
+        "ol",
         null,
         React.createElement(
-            'li',
+            "li",
             null,
-            'Item 1'
+            "Item 1"
         ),
         React.createElement(
-            'li',
+            "li",
             null,
-            'Item 2'
+            "Item 2"
         )
     )
 );
 
+var userName = "Zakaria Jaouad";
+var age = 26;
+var userLocation = "East Providence";
+
 var templateTwo = React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-        'h1',
+        "h1",
         null,
-        'Zakaria Jaouad'
+        userName + "!"
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'Age: 26'
+        "Age: ",
+        age
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'Location: East Providence'
+        "Location: ",
+        userLocation
     )
 );
 
