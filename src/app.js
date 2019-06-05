@@ -12,15 +12,17 @@ var template = (
     </div>
 );
 
-var userName = "Zakaria Jaouad";
-var age = 26;
-var userLocation = "East Providence";
+var user = {
+    name: 'Zakaria Jaouad',
+    age: 26,
+    location: "Pawtucket"
+};
 
 var templateTwo = (
     <div>
-        <h1>{userName + "!"}</h1>
-        <p>Age: {age}</p>
-        <p>Location: {userLocation}</p>
+        <h1>{user.name + "!"}</h1>
+        <p>Age: {user.age}</p>
+        <p>Location: {user.location}</p>
     </div>
 );
 
