@@ -6,9 +6,14 @@ var app = {
     title: "Indecision App",
     subtitle: "Put your life in the hands of a computer",
     options: ['One', 'Two']
+};
 
-    // JSX - JavaScript XML
-};var template = React.createElement(
+var onFormSubmit = function onFormSubmit(e) {
+    e.preventDefault();
+};
+
+// JSX - JavaScript XML
+var template = React.createElement(
     "div",
     null,
     React.createElement(
@@ -42,6 +47,16 @@ var app = {
             "li",
             null,
             "Item 2"
+        )
+    ),
+    React.createElement(
+        "form",
+        { onSubmit: onFormSubmit },
+        React.createElement("input", { type: "text", name: "option" }),
+        React.createElement(
+            "button",
+            null,
+            "Add Option"
         )
     )
 );

@@ -4,7 +4,11 @@ const app = {
     title: "Indecision App",
     subtitle: "Put your life in the hands of a computer",
     options: ['One', 'Two']
-}
+};
+
+const onFormSubmit = (e) => {
+    e.preventDefault();
+};
 
 // JSX - JavaScript XML
 const template = (
@@ -16,6 +20,10 @@ const template = (
             <li>Item 1</li>
             <li>Item 2</li>
         </ol>
+        <form onSubmit={onFormSubmit}>
+            <input type="text" name="option"/>
+            <button>Add Option</button>
+        </form>
     </div>
 );
 
